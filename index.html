@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aviator Tahmin</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: red;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .tahmin {
+      font-size: 48px;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aviator Tahmin Programı</h1>
+  <div class="tahmin" id="tahmin">Tahmin için tıkla</div>
+  <button onclick="tahminEt()">Tahmin Et</button>
+
+  <script>
+    function tahminEt() {
+      const rastgele = (Math.random() * 99 + 1).toFixed(2);
+      document.getElementById('tahmin').innerText = rastgele + "x";
+    }
+  </script>
+</body>
+</html>
